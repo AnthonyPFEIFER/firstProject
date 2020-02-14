@@ -1,0 +1,18 @@
+<ng-container *ngIf="!isLoading">
+    <div class="detail-art" *ngIf="article">
+        <h2>{{article.titre | uppercase}}</h2>
+        <img src="{{article.image}}" class="img-art" alt="">
+        <p>{{article.contenu}}</p>
+
+    </div>
+
+    <!-- <div *ngIf="!article">Il ne se passe rien</div>
+ -->
+
+
+
+</ng-container>
+
+<ng-container *ngIf="isLoading">
+    En cours de chargement.... <fa-icon [spin]="true" [icon]="faSpinner"></fa-icon>
+</ng-container>

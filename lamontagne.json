@@ -1,0 +1,16 @@
+{
+  "article": [
+    {
+      "titre": "Blood Bowl",
+      "contenu": "Super match aussi, les Orcs reviennent en force",
+      "image": "https://store-images.s-microsoft.com/image/apps.51089.68141022963856152.49105c5d-4fe0-4f89-9f88-f108752176bf.805eefa7-492b-4bce-a4f8-dcc6ff27563c?mode=scale&q=90&h=1080&w=1920",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "titre": "Elfes vs Orcs",
+      "image": "https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/globalmeatnews.com/article/2019/01/07/belgium-bans-halal-and-kosher-slaughtering/8998160-1-eng-GB/Belgium-bans-halal-and-kosher-slaughtering_wrbm_large.jpg",
+      "contenu": "Une véritable Boucherie au Stade entre les Orcs et les Elfes"
+    }
+  ]
+}

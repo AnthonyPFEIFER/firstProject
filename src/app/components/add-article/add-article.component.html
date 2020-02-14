@@ -1,0 +1,35 @@
+<div class="styleForm">
+    <h1 class="text-center titreForm"> Modifier un article</h1>
+
+    <form #articleFormulaire="ngForm" (ngSubmit)="onSubmit()">
+        <!-- 
+        <div class="form-group">
+            <label for="name">ID de l'Article</label>
+            <input class="form-control" type="number" name="name" id="name" required [(ngModel)]="articleForm.id"
+                #id="ngModel">
+            <div [hidden]="id.valid" class="alert alert-danger">Il faut rajouter un ID</div>
+        </div> -->
+        <div class="form-group">
+            <label for="name">Titre de l'Article</label>
+            <input class="form-control" type="text" name="titre" id="titre" required [(ngModel)]="articleForm.titre"
+                #titre="ngModel">
+            <div [hidden]="titre.valid" class="alert alert-danger">Il faut rajouter un titre</div>
+        </div>
+        <div class="form-group">
+            <label for="name">Contenu de l'Article</label>
+            <input class="form-control" type="text" name="contenu" id="contenu" required
+                [(ngModel)]="articleForm.contenu" #contenu="ngModel">
+            <div [hidden]="contenu.valid" class="alert alert-danger">Il faut rajouter du Contenu</div>
+        </div>
+        <div class="form-group">
+            <label for="name">Image de l'Article</label>
+            <input class="form-control" type="text" name="image" id="image" required [(ngModel)]="articleForm.image"
+                #image="ngModel">
+            <div [hidden]="image.valid" class="alert alert-danger">Il faut rajouter une image</div>
+        </div>
+        <input type="submit" class=" form-control btn btn-success" [disabled]='!articleFormulaire.valid'
+            value="Soumission">
+        <button class="form-control btn btn-danger" (click)="returnHome()"> Retour page principale</button>
+
+    </form>
+</div>

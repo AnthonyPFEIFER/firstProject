@@ -1,0 +1,36 @@
+<div>
+    {{nbClick}} ont voté
+</div>
+
+<div><button class="btn-success" (click)="changeBtnClicked()">
+        Cliquez sur moi siou plait <br>
+
+    </button>
+    <button (click)="showSuccess()"> Test Toaster</button></div>
+<div *ngIf="btnClicked" [ngSwitch]="favoriTeam">
+    <img *ngSwitchCase="'ASM'" src="https://upload.wikimedia.org/wikipedia/fr/a/a8/Logo_ASM_Clermont_Auvergne_2019.svg"
+        alt="">
+    <img *ngSwitchCase="'RCT'"
+        src="https://vignette.wikia.nocookie.net/southpark/images/4/4b/Timmy.png/revision/latest/scale-to-width-down/340?cb=20120218194457&path-prefix=fr"
+        alt="">
+    <img *ngSwitchCase="'USAP'" src="https://upload.wikimedia.org/wikipedia/fr/7/77/Logo_USA_Perpignan_2017.svg" alt="">
+</div>
+
+<!-- <img *ngIf="btnClicked" src="..\assets\img\plague-inc-evolved-wallpaper-5.jpg" alt=""> -->
+<ol>
+    <li *ngFor="let team of classement"> {{team}}</li>
+</ol>
+
+
+<!--
+  La variable is loading nous permet d'afficher les resultats seulement quand le serveur à fini
+  la requete -->
+<ng-container *ngIf="!isLoading">
+    <div *ngFor="let article of articles">
+        <app-detail-article (voteEmitter)="vote($event)" [article]="article"></app-detail-article>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="isLoading">
+    En cours de chargement.... <fa-icon [spin]="true" [icon]="faSpinner"></fa-icon>
+</ng-container>

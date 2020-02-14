@@ -1,0 +1,4 @@
+<div class="detail-art" [style.background-color]="bgColor">
+    <h2>{{article.titre | uppercase}}</h2>
+    <a [routerLink]="['/article', article.id]"> Cliquez pour en savoir plus sur:{{article.titre}}</a>
+</div>
